@@ -15,4 +15,4 @@ def trebuchet_calibration
   numbers.inject(:+)
 end
 
-p trebuchet_calibration
+puts "Part 1 solution: #{trebuchet_calibration}"
