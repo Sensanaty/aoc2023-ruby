@@ -5,12 +5,9 @@
 /coverage/
 /InstalledFiles
 /pkg/
-/spec/reports/
-/spec/examples.txt
 /test/tmp/
 /test/version_tmp/
 /tmp/
-
  .env
 .byebug_history
 
@@ -32,13 +29,6 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
-Icon
-
-
-# Thumbnails
-._*
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
