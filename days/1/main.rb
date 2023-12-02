@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 FILE_PATH = File.join(File.dirname(__FILE__), 'input')
+INPUT = File.read(FILE_PATH)
 
 ### === Part 1 === ###
+# Splits the input file, which is delimited by newlines, and scans for any digits per line. The scan returns an array of
+# digits, so we simply return the 1st index position and the last index position, after which we run a simple inject
 def trebuchet_calibration
-  input = File.read(FILE_PATH)
-
-  numbers = input.split("\n").map do |line|
+  numbers = INPUT.split("\n").map do |line|
     scan = line.scan(/\d/)
 
     (scan[0] + scan[-1]).to_i
