@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'ascii'
-# cube
+cube
 
 FILE_PATH = File.join(File.dirname(__FILE__), 'input')
 INPUT = File.read(FILE_PATH)
@@ -20,7 +20,7 @@ def conundruming_cubes
   INPUT.split("\n").map do |line|
     is_possible = true
 
-    id = line.match(LINE_FORMAT)[0].to_i
+    id = line.match(LINE_FORMAT)[1].to_i
     line.gsub!(/Game\s\d*:\s/, '')
 
     sets = line.split(';')
