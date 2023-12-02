@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require_relative 'ascii'
+trebuchet
+
 FILE_PATH = File.join(File.dirname(__FILE__), 'input')
 INPUT = File.read(FILE_PATH)
 
