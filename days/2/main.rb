@@ -45,3 +45,36 @@ def conundruming_cubes
 end
 
 puts "Part 1 solution: #{conundruming_cubes}"
+
+### === Part 2 === ###
+
+def minimum_cubology
+  sum = 0
+
+  INPUT.split("\n").each do |line|
+    line.gsub!(/Game\s\d*:\s/, '')
+    maximum = Hash.new(0)
+
+    sets = line.split(';')
+
+    sets.each do |set|
+      games = set.split(',')
+
+      games.each do |game|
+        value, color = game.strip.split("\s")
+        maximum[color] = [value.to_i, maximum[color]].max
+      end
+    end
+
+    power = 1
+    maximum.each_value do |value|
+      power *= value.to_i
+    end
+
+    sum += power
+  end
+
+  sum
+end
+
+puts "Part 2 solution: #{minimum_cubology}"
