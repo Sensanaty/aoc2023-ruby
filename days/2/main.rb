@@ -17,7 +17,7 @@ POSSIBLE_COLORS = { 'red' => 12, 'green' => 13, 'blue' => 14 }.freeze
 def conundruming_cubes
   sum = 0
 
-  INPUT.split("\n").map do |line|
+  INPUT.split("\n").each do |line|
     is_possible = true
 
     id = line.match(LINE_FORMAT)[1].to_i
