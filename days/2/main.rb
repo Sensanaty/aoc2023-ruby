@@ -8,7 +8,7 @@ INPUT = File.read(FILE_PATH)
 
 ### === Part 1 === ###
 
-# General format that each round of the game follows with 2 capture groups, 1 for the Game ID and 1 for the contents
+# General format that each round of the game follows with a capture group for the game ID
 LINE_FORMAT = /^Game\s(\d+):\s.*$/
 
 # The possible max quantity for each color
